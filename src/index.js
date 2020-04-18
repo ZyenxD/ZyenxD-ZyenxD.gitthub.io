@@ -129,10 +129,9 @@ function drawResults(ctx, results, color, size) {
         } else {
             let compare_image = ctx.getImageData(0, 0, videoWidth, videoHeight)
             let result = diferentiateImages(previousframe, compare_image)
-            // console.log(result)
-            if (result > 9.7) {
+            if (result > 10) {
                 previousframe = ctx.getImageData(0, 0, videoWidth, videoHeight)
-                fetch('http://ec2-54-242-39-163.compute-1.amazonaws.com/buildframes/', { method: 'POST', body: ctx.canvas.toDataURL('image/jpeg', 1.0).replace(/^data:image\/[a-z]+;base64,/, "") })
+                fetch('https://cors-anywhere.herokuapp.com/http://ec2-54-242-39-163.compute-1.amazonaws.com/buildframes/', { method: 'POST', body: ctx.canvas.toDataURL('image/jpeg', 1.0).replace(/^data:image\/[a-z]+;base64,/, "") })
                     .then(res => res.text())
                     .then(body => {
                         console.log(body)
@@ -144,9 +143,7 @@ function drawResults(ctx, results, color, size) {
                         // ctx.drawTextBox(frame, { x: 10, y: 10 }, [{ text: obj.emotions }], 0.4)
                     });
             }
-
         }
-
     }
 }
 
