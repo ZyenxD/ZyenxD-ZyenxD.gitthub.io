@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/user.css">
+    <title>Req. de Desarrollador</title>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="index.html">Demo</a></li>
+        <li><a class="active" href="devmanual.html">Req. de Desarrollador</a></li>
+        <li><a href="usermanual.html">Req. de Usuario</a></li>
+    </ul>
+    <h1 style="text-align: center;">Manual de desarrollo</h1>
+    <p>
+        <ul>
+            <li>
+                <h3>Requerimientos iniciales.</h3>
+            </li>
+            <p>
+                El Proyecto consiste en la detección de caras y emociones dentro de un archive de video. Los
+                requerimientos que
+                implican los mismo consisten en:
+                <ul>
+                    <li>
+                        Identificar si o no hay un rostro en una imagen
+                    </li>
+                    <li>
+                        Identificar la emoción de esta
+                    </li>
+                </ul>
+            </p>
+            <li>
+                <h3> Análisis del sistema.</h3>
+            </li>
+            <p>
+                El Sistema consiste en una aplicación Web, la cual le permita al usuario identificar sus emociones y la
+                presencia de un rostro utilizando la cámara de video de uno de sus dispositivos personales.
+
+                Esta información es obtenida a través de un servicio web el cual recibe imágenes o fragmentos de las
+                mismas y
+                predice la emoción de dichas basándose en el entrenamiento recibido.
+            </p>
+            <li>
+                <h3>Diagrama en bloques de la constitución interna (Entradas/Procesos/Validaciones/Salidas).</h3>
+            </li>
+            <img src="./resources/diagramFlow.png">
+            <li>
+                <h3>Diagramas de flujo de la lógica de funcionamiento.</h3>
+            </li>
+            <img src="./resources/chartFlow.png">
+            <li>
+                <h3>Descripción del o los algoritmos o modelos empleados. Justificación de su uso.</h3>
+            </li>
+            <p>
+                Para este caso utilizamos RELU (Rectified Linear Unit), ya que presentaba un mayor rendimiento en el
+                entrenamiento del modelo durante las pruebas.
+            </p>
+            <li>
+                <h3>Detalles de las Estructuras de Datos/Objetos/Archivos Planos/Bases de Datos empleadas.</h3>
+            </li>
+            <p>
+                Para este Proyecto se utilice la data de pruebas de Fer2013.csv, cual contiene una gran cantidad de
+                fotos de
+                expresiones faciales. Estas imágenes contienen las dimensiones de 48*48 en pixeles y esta divididas en
+                pruebas y
+                entrenamiento. Además, estas esta dividida de forma categórica en 7 emociones:
+                <ul>
+                    <li>
+                        tristeza
+                    </li>
+                    <li>
+                        Felicidad
+                    </li>
+                    <li>
+                        enojo
+                    </li>
+                    <li>
+                        neutralidad
+                    </li>
+                    <li>
+                        disgusto
+                    </li>
+                    <li>
+                        miedo
+                    </li>
+                </ul>
+            </p>
+            <li>
+                <h3>Justificación de los datos de prueba empleados.</h3>
+            </li>
+            <p>
+                Esta base de datos es una de las mas usadas para este tipo de proyecto por su gran variedad de imágenes
+                y
+                emociones
+            </p>
+            <li>
+                <h3>Análisis de los resultados de las pruebas realizadas.</h3>
+            </li>
+            <p>
+                Los resultados que se obtuvieron durante el entrenamiento de la data fueron de un 0.85 de accuracy. Lo
+                cual nos
+                indica que las predicciones hechas con el modelo en si, serán bastante aciertas
+            </p>
+        </ul>
+    </p>
+</body>
+
+</html>

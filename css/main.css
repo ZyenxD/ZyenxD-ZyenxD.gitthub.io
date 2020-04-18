@@ -1,5 +1,23 @@
+body{
+  margin: 0;
+}
 canvas {
     border: 1px solid black;
+  }
+  .container{
+    padding-top: 30px;
+    position: relative;
+    
+  }
+  .buttons{
+    background-color: cornflowerblue; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
   }
   .invisible {
     display: none;
@@ -19,4 +37,32 @@ canvas {
     width: 25%;
     vertical-align: top;
     font: 14px 'Lucida Grande', sans-serif;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: cornflowerblue;
   }

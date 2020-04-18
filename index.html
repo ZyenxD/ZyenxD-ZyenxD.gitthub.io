@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Cam</title>
 </head>
+
 <body>
+    <ul>
+        <li><a class="active" href="index.html">Demo</a></li>
+        <li><a href="devmanual.html">Req. de Desarrollador</a></li>
+        <li><a href="usermanual.html">Req. de Usuario</a></li>
+    </ul>
+    <h1 class="text-center">Deteccion de Emociones Humanas</h1>
     <div id="container">
         <canvas class="center-block" id="canvasOutput" width=320 height=240></canvas>
-        <button onclick="stopCamera()">stop</button>
-        <button onclick="startCamera()">start</button>
+        <div style="padding-top: 20px;text-align: center;">
+            <button class="buttons" onclick="stopCamera()">stop</button>
+            <button class="buttons" onclick="startCamera()">start</button>
+        </div>
+
     </div>
     <div class="invisible">
         <video id="video" class="hidden">Your browser does not support the video tag.</video>
