@@ -131,7 +131,18 @@ function drawResults(ctx, results, color, size) {
             let result = diferentiateImages(previousframe, compare_image)
             if (result > 10) {
                 previousframe = ctx.getImageData(0, 0, videoWidth, videoHeight)
-                fetch('https://cors-anywhere.herokuapp.com/http://ec2-54-242-39-163.compute-1.amazonaws.com/buildframes/', { method: 'POST', body: ctx.canvas.toDataURL('image/jpeg', 1.0).replace(/^data:image\/[a-z]+;base64,/, "") })
+                fetch('https://cors-anywhere.herokuapp.com/http://ec2-54-242-39-163.compute-1.amazonaws.com/buildframes/',
+                    {
+                        method: 'POST',
+                        body: ctx.canvas.toDataURL('image/jpeg', 1.0).replace(/^data:image\/[a-z]+;base64,/, ""),
+                        headers: {
+                            ' Access-Control-Allow-Methods': "GET,POST",
+                            'Access-Control-Allow-Headers': "Content-Type,API-Key.",
+                            'Access-Control-Allow-Origin': "*"
+                        },
+                        mode: 'cors'
+                    }
+                )
                     .then(res => res.text())
                     .then(body => {
                         console.log(body)
