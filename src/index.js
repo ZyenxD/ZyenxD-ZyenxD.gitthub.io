@@ -136,7 +136,7 @@ function drawResults(ctx, results, color, size) {
                         method: 'POST',
                         body: ctx.canvas.toDataURL('image/jpeg', 1.0).replace(/^data:image\/[a-z]+;base64,/, ""),
                         headers: {
-                            ' Access-Control-Allow-Methods': "GET,POST",
+                            'Access-Control-Allow-Methods': "GET,POST",
                             'Access-Control-Allow-Headers': "Content-Type,API-Key.",
                             'Access-Control-Allow-Origin': "*"
                         },
